@@ -1,0 +1,150 @@
+{
+    "id": "_TVy02MbJ_QfQs69W4O0f",
+    "geometry_type": "point",
+    "geometry_label": "NEEDY_PEOPLE",
+    "form": {
+        "NEEDY_PEOPLE_SURVEY": {
+            "pages": {
+                "NEEDY_PEOPLE_SURVEY": {
+                    "fields": {
+                        "State Name": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "STATE_NME",
+                            "description": "ASSESSMENT LOCATION",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "LAGOS"      
+                            ]
+                        },
+                        " Local Government Area": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "LGA_NME",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "Main Land"
+                            ]
+                            
+                        },
+                        "Time": {
+                            "ui_type": "none",
+                            "column_type": "TIMESTAMP",
+                            "column_name": "TIME",
+                            "required": true
+                        },
+                        "Longitude": {
+                            "ui_type": "double",
+                            "column_type": "LONGITUDE",
+                            "column_name": "LONGITUDE",
+                            "required": true
+                        },
+                        "Latitude": {
+                            "ui_type": "double",
+                            "column_type": "LATITUDE",
+                            "column_name": "LATITUDE",
+                            "required": true                       
+                        }
+                    }
+                },
+                "Needy People Information": {
+                    "fields": {
+                         "FullName": {
+                            "ui_type": "text_field",
+                            "column_type": "TEXT",
+                            "column_name": "NM_PERS",
+                            "required": true,
+                            "min_length": 0,
+                            "max_length": 50
+                        },
+                        "Address": {
+                            "ui_type": "text_field",
+                            "column_type": "TEXT",
+                            "column_name": "ADD_NDY",
+                            "required": true,
+                            "min_length": 0,
+                            "max_length": 25
+                        },
+                        "Phone Number": {
+                            "ui_type": "text_field",
+                            "column_type": "INTEGER",
+                            "column_name": "NDY_PHNUM",
+                            "required": true,
+                            "min_length": 5,
+                            "max_length": 11
+                        },
+
+                        "Sex": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "TYP_SEX",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "Male",
+                                "Female"
+                            ]
+                        },
+                         "Occupation": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "STUS_OCCU",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "Employed",
+                                "Unemployed"
+                            ],
+                            "skip":[
+                                "Type of Occupation"   
+                            ],
+
+                            "on":"Unemployed"
+                        },
+                      
+                        "Type of Occupation": {
+                            "ui_type": "text_field",
+                            "column_type": "TEXT",
+                            "column_name": "OCU_NDY",
+                            "required": true,
+                            "min_length": 0,
+                            "max_length": 25
+                        },
+                        "Daily Income": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "DAY_INCOM",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "0 - 1000",
+                                "1000 - 5000",
+                                "5000 - 10000",
+                                "10,000 - 20,000",
+                                "20000 - 50,000",
+                                "50,000 and Above"
+                            ]
+                        },
+                         "Daily Expenditure": {
+                            "ui_type": "drop_down",
+                            "column_type": "TEXT",
+                            "column_name": "DAY_EXPEN",
+                            "required": true,
+                            "values": [
+                                "SELECT OPTION",
+                                "0 - 1000",
+                                "1000 - 5000",
+                                "5000 - 10000",
+                                "10,000 - 20,000",
+                                "20000 - 50,000",
+                                "50,000 and Above"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
